@@ -1,6 +1,8 @@
-# Bing Weather 4.53 Local Tile
-#安装包在dist里
-这是一个用于继续改造 Microsoft/Bing Weather 早期 UWP 客户端的项目。当前方案以 Bing Weather 4.53 作为可运行底包，通过本地 Open-Meteo 适配器提供天气数据和动态磁贴 XML，并尽量恢复 4.46 时代的动态磁贴视觉风格。
+# Bing Weather 4.53 复现旧版动态磁贴
+
+>安装包在dist里。
+
+这是一个用于继续改造 Microsoft/Bing Weather 早期 UWP 客户端的项目。当前方案以 Bing Weather 4.53 作为可运行底包，通过4.53版本原生API提供天气数据和动态磁贴 XML。
 
 项目重点不是完整复活旧版微软天气服务，而是保留 4.53 的可运行性，同时恢复用户最容易感知的旧版体验：
 
@@ -14,7 +16,7 @@
 
 - 修改版 AppX 已经打包在 `dist/` 目录。
 - AppX 的动态磁贴地址已指向本地服务 `http://127.0.0.1:8765`。
-- 本地适配器使用 Open-Meteo 免费天气数据。
+
 - 本地适配器会输出兼容旧 MSN/Bing Weather 调用形态的天气、地点搜索和动态磁贴响应。
 - 已包含安装、启动、健康检查、磁贴 XML 预览和重新打包脚本。
 
@@ -73,12 +75,6 @@ scripts\install-localtile.bat
 scripts\start-adapter.bat
 ```
 
-服务默认监听：
-
-```text
-http://127.0.0.1:8765
-```
-
 ### 3. 检查服务状态
 
 ```bat
@@ -109,8 +105,6 @@ adapter/OpenMeteoAdapter/openmeteo_msn_adapter.py
 
 它主要负责：
 
-- 请求 Open-Meteo 天气和地理编码接口。
-- 把 Open-Meteo 数据转换成旧 MSN/Bing Weather 接近可用的 JSON 结构。
 - 响应 `/weather/`、`/locations/search`、`/geo/AutoSuggest`、`/REST/v1/Locations` 等路径。
 - 生成 Windows 动态磁贴 XML。
 - 提供本地天气图标和背景图静态资源。
@@ -133,7 +127,6 @@ scripts\repack-adapter-zip.bat
 
 - Windows 开始菜单可能缓存旧磁贴，安装后需要取消固定并重新固定。
 - 本地适配器必须保持运行，否则动态磁贴可能空白或回退到静态磁贴。
-- Open-Meteo 的地点搜索结果与微软原版格式不完全一致，中文地名仍有优化空间。
 - 当前仓库包含已经打好的 AppX，没有完整自动重建 AppX 的流水线。
 - 如果要继续修改 AppX 内部配置，需要回到解包目录重新签名打包。
 
