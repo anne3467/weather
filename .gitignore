@@ -1,0 +1,6 @@
+adapter/OpenMeteoAdapter/adapter.log
+adapter/OpenMeteoAdapter/__pycache__/
+tile-preview.xml
+*.pyc
+*.tmp
+_stage/
