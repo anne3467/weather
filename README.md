@@ -1,5 +1,5 @@
 # Bing Weather 4.53 Local Tile
-
+#安装包在dist里
 这是一个用于继续改造 Microsoft/Bing Weather 早期 UWP 客户端的项目。当前方案以 Bing Weather 4.53 作为可运行底包，通过本地 Open-Meteo 适配器提供天气数据和动态磁贴 XML，并尽量恢复 4.46 时代的动态磁贴视觉风格。
 
 项目重点不是完整复活旧版微软天气服务，而是保留 4.53 的可运行性，同时恢复用户最容易感知的旧版体验：
