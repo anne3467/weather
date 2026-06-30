@@ -5,6 +5,25 @@
 
 这是一个用于继续改造 Microsoft/Bing Weather 早期 UWP 客户端的项目。当前方案以 Bing Weather 4.53 作为可运行底包，通过4.53版本原生API提供天气数据和动态磁贴 XML
 
+## 效果预览
+
+<p>
+  <img src="docs/images/tile-preview-01.png" alt="旧版动态磁贴效果 1" width="320">
+  <img src="docs/images/tile-preview-02.png" alt="旧版动态磁贴效果 2" width="320">
+  <img src="docs/images/tile-preview-03.png" alt="旧版动态磁贴效果 3" width="220">
+  <img src="docs/images/tile-preview-04.png" alt="旧版动态磁贴效果 4" width="320">
+  <img src="docs/images/tile-preview-05.png" alt="旧版动态磁贴效果 5" width="320">
+  <img src="docs/images/tile-preview-06.png" alt="旧版动态磁贴效果 6" width="220">
+  <img src="docs/images/tile-preview-07.png" alt="旧版动态磁贴效果 7" width="220">
+  <img src="docs/images/tile-preview-08.png" alt="旧版动态磁贴效果 8" width="320">
+  <img src="docs/images/tile-preview-09.png" alt="旧版动态磁贴效果 9" width="220">
+  <img src="docs/images/tile-preview-10.png" alt="旧版动态磁贴效果 10" width="320">
+  <img src="docs/images/tile-preview-11.png" alt="旧版动态磁贴效果 11" width="220">
+  <img src="docs/images/tile-preview-12.png" alt="旧版动态磁贴效果 12" width="320">
+  <img src="docs/images/tile-preview-13.png" alt="旧版动态磁贴效果 13" width="220">
+  <img src="docs/images/tile-preview-14.png" alt="旧版动态磁贴效果 14" width="320">
+</p>
+
 ## 当前状态
 
 - 修改版 AppX 已经打包在 `dist/` 目录。
@@ -63,4 +82,3 @@ scripts\repack-adapter-zip.bat
 - 优化中文地点名和反向地理编码。
 - 如果 adaptive tile 布局仍不够接近 4.46，可考虑由服务端直接渲染整张 PNG 磁贴图。
 - 改进安装器，把证书、AppX、本地服务和计划任务做成更完整的安装流程。
-
