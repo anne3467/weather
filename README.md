@@ -22,6 +22,7 @@
   <img src="docs/images/tile-preview-12.png" alt="旧版动态磁贴效果 12" width="320">
   <img src="docs/images/tile-preview-13.png" alt="旧版动态磁贴效果 13" width="220">
   <img src="docs/images/tile-preview-14.png" alt="旧版动态磁贴效果 14" width="320">
+   <img src="docs/images/tile-preview-15.png" alt="旧版动态磁贴效果 14" width="320">
 </p>
 
 ## 当前状态
